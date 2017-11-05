@@ -4,4 +4,4 @@ WORKDIR /opt/electroneum-pool
 
 EXPOSE 80
 
-ENV electroneum-pool
+ENV NAME electroneum-pool
