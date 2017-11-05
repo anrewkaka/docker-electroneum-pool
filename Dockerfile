@@ -7,7 +7,9 @@ EXPOSE 80
 ENV NAME electroneum-pool
 
 # Update package
-RUN apt-get -qq update
+RUN  apt-get -qq update \
+  && apt-get install -y wget \
+  && rm -rf /var/lib/apt/lists/*
 
 # Install Node.js
 RUN apt-get install -qq --yes curl
