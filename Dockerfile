@@ -13,9 +13,9 @@ RUN  apt-get -qq update \
   && rm -rf /var/lib/apt/lists/*
 
 # Install Node.js
-RUN curl --silent --location https://deb.nodesource.com/setup_8.x | bash -
-RUN apt-get install --yes nodejs
-RUN apt-get install --yes build-essential
+RUN curl --silent --location https://deb.nodesource.com/setup_8.x | bash - \
+  && apt-get install --yes nodejs \
+  && apt-get install --yes build-essential
 
 # Install libssl, boost
 RUN apt-get install -y libssl-dev libboost-all-dev
