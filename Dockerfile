@@ -11,7 +11,7 @@ RUN apt-get -qq update
 
 # Install Node.js
 RUN apt-get install -qq --yes curl
-RUN curl --silent --location https://deb.nodesource.com/setup_8.x | sudo bash -
+RUN curl --silent --location https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install --yes nodejs
 RUN apt-get install --yes build-essential
 
