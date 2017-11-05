@@ -48,4 +48,5 @@ CMD ["redis-server", "/etc/redis/redis.conf"]
 RUN git clone https://github.com/electroneum/electroneum-pool.git pool \
   && cd pool \
   && npm update
+  && node init.js
 
