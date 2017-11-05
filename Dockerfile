@@ -45,8 +45,9 @@ VOLUME ["/data"]
 CMD ["redis-server", "/etc/redis/redis.conf"]
 
 # install electroneum pool
-RUN git clone https://github.com/electroneum/electroneum-pool.git pool \
+RUN \
+  cd /opt/electroneum-pool \
+  && git clone https://github.com/electroneum/electroneum-pool.git pool \
   && cd pool \
   && npm update \
   && node init.js
-
