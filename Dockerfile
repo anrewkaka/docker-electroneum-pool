@@ -16,7 +16,7 @@ RUN apt-get install --yes nodejs
 RUN apt-get install --yes build-essential
 
 # Install libssl, boost
-RUN apt-get install -yes libssl-dev libboost-all-dev
+RUN apt-get install -y libssl-dev libboost-all-dev
 
 # install redis
 RUN wget http://download.redis.io/redis-stable.tar.gz
