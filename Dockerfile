@@ -14,4 +14,4 @@ RUN apt-get install -y nodejs build-essential libssl-dev libboost-all-dev
 RUN wget http://download.redis.io/redis-stable.tar.gz
 RUN tar xvzf redis-stable.tar.gz
 RUN cd redis-stable
-RUN make
+RUN make install
